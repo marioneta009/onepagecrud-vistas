@@ -1,4 +1,9 @@
 # Crud PHP con MySQL (Vistas)
+
+<p align="center">
+  <img src="img/php-crud-application-demo.gif">
+</p>
+
 Vistas a utilizarse para llevar a cabo practica de la elaboración de un crud con PHP y MySQL, esto con la intención de enfocar los esfuerzos unicamente en programar la aplicación y  ya no tanto en la maquetación del mismo.
 
 ## Instrucciones:
