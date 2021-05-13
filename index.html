@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple PHP CRUD Application By W3jar.Com</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="banner">
+        <img src="img/crud.jpg" alt="">
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1 class="title">PHP CRUD Application</h1>
+            <p>By <a href="https://github.com/marioneta009">Marioneta</a></p>
+        </header>
+        <div class="wrapper">
+            <div class="form">
+                <form method="POST">
+                    <label for="userName">Nombre de Usuario</label>
+                    <input type="text" name="u_name" id="userName" placeholder="Nombre" autocomplete="off" required>
+                    <label for="userEmail">Email</label>
+                    <input type="email" name="u_email" id="userEmail" placeholder="Email" autocomplete="off" required>
+                    <p class="msg err-msg">Mi mensaje de error</p>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="user-list">
+                
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                                <tr>
+                                    <td>Nombre ejemplo</td>
+                                    <td>Email de Ejemplo</td>
+                                    <td>
+                                        <a href="edit.php?id=" class="edit">Edit</a>&nbsp;|
+                                        <a href="delete.php?id=" class="delete delete-action">Delete</a>
+                                    </td>
+                                </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var delteAction = document.querySelectorAll('.delete-action');
+        delteAction.forEach((el) => {
+            el.onclick = function(e) {
+                e.preventDefault();
+                if (confirm('Are you sure?')) {
+                    window.location.href = e.target.href;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
